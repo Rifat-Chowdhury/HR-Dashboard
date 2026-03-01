@@ -2,7 +2,7 @@
 HR Dataset Generator (8,950 records)
 
 Creates a realistic synthetic HR dataset with:
-- Employee ID
+- Employee ID (random unique like 00-95822412)
 - First Name / Last Name
 - Gender (Female 46%, Male 54%)
 - State / City (predefined mapping)
@@ -17,7 +17,7 @@ Creates a realistic synthetic HR dataset with:
 - Termination Date (11.2% terminated; year probabilities 2015–2024; >= 6 months after hire)
 - Adjusted Salary (computed from gender, education, age)
 
-Outputs: CSV file (default: hr_dataset.csv)
+Outputs: CSV file (default: HumanResources.csv)
 
 Notes:
 - This is synthetic data for demos/testing only.
@@ -27,10 +27,8 @@ Notes:
 from __future__ import annotations
 
 import csv
-import math
 import random
-from dataclasses import dataclass
-from datetime import date, datetime, timedelta
+from datetime import date, timedelta
 from typing import Dict, List, Tuple, Optional
 
 
@@ -39,7 +37,7 @@ from typing import Dict, List, Tuple, Optional
 # =========================
 
 N_RECORDS = 8950
-OUTPUT_CSV = "hr_dataset.csv"
+OUTPUT_CSV = "HumanResources.csv"
 SEED = 42  # set to None for non-deterministic runs
 
 GENDER_CHOICES = ["Female", "Male"]
@@ -216,7 +214,7 @@ EDUCATION_BY_JOB: Dict[str, List[Tuple[str, float]]] = {
 
     # Legal/Product/Data
     "Paralegal": [("Associate", 0.55), ("Bachelor", 0.40), ("Master", 0.05)],
-    "Legal Counsel": [("Master", 0.85), ("PhD", 0.15)],  # stands in for JD/LLM-like advanced education
+    "Legal Counsel": [("Master", 0.85), ("PhD", 0.15)],
     "Compliance Specialist": [("Bachelor", 0.75), ("Master", 0.25)],
 
     "Product Analyst": [("Bachelor", 0.80), ("Master", 0.20)],
@@ -313,7 +311,7 @@ _add_salary("Engineering", "DevOps Engineer", 105000, 155000)
 _add_salary("Engineering", "Architect", 160000, 230000)
 
 # Sales
-_add_salary("Sales", "Sales Representative", 45000, 90000)  # base-ish (commission not modeled)
+_add_salary("Sales", "Sales Representative", 45000, 90000)
 _add_salary("Sales", "Account Executive", 65000, 120000)
 _add_salary("Sales", "Sales Manager", 90000, 160000)
 _add_salary("Sales", "Sales Operations Analyst", 60000, 100000)
@@ -406,7 +404,7 @@ TERM_YEAR_WEIGHTS = {
 }
 
 # Adjusted Salary rules
-GENDER_MULTIPLIER = {"Female": 0.985, "Male": 1.000}  # example pay-gap-like adjustment (synthetic)
+GENDER_MULTIPLIER = {"Female": 0.985, "Male": 1.000}
 EDU_INCREMENT = {
     "High School": 0.00,
     "Associate": 0.03,
@@ -458,13 +456,12 @@ def seed_everything(seed: Optional[int]) -> None:
         random.seed(seed)
 
 def weighted_choice(items: List[str], weights: List[float]) -> str:
-    # random.choices returns a list
     return random.choices(items, weights=weights, k=1)[0]
 
-def weighted_choice_from_dict(d: Dict[str, float]) -> str:
+def weighted_choice_from_dict(d: Dict[int, float] | Dict[str, float]) -> str:
     items = list(d.keys())
     weights = list(d.values())
-    return weighted_choice(items, weights)
+    return weighted_choice([str(x) for x in items], weights)
 
 def random_date_in_year(year: int) -> date:
     start = date(year, 1, 1)
@@ -476,24 +473,19 @@ def clamp(x: float, lo: float, hi: float) -> float:
     return max(lo, min(hi, x))
 
 def years_between(d1: date, d2: date) -> int:
-    # full years between dates (d2 assumed >= d1)
     years = d2.year - d1.year
     if (d2.month, d2.day) < (d1.month, d1.day):
         years -= 1
     return years
 
 def add_months(d: date, months: int) -> date:
-    # safe-ish month add without external libs
     y = d.year + (d.month - 1 + months) // 12
     m = (d.month - 1 + months) % 12 + 1
-    # choose min day in target month
-    # days in month:
     if m in (1, 3, 5, 7, 8, 10, 12):
         max_day = 31
     elif m in (4, 6, 9, 11):
         max_day = 30
     else:
-        # Feb
         leap = (y % 4 == 0 and (y % 100 != 0 or y % 400 == 0))
         max_day = 29 if leap else 28
     day = min(d.day, max_day)
@@ -501,12 +493,28 @@ def add_months(d: date, months: int) -> date:
 
 
 # =========================
-# GENERATION LOGIC
+# EMPLOYEE ID (FIXED)
 # =========================
 
-def generate_employee_id(i: int) -> str:
-    # Example format: EMP-000001
-    return f"EMP-{i:06d}"
+def generate_employee_ids(n: int) -> List[str]:
+    """
+    Generate n UNIQUE Employee IDs in the format:
+        ##-########
+    Example:
+        00-95822412
+        54-10293847
+    """
+    ids: set[str] = set()
+    while len(ids) < n:
+        prefix = f"{random.randint(0, 99):02d}"
+        suffix = f"{random.randint(0, 99999999):08d}"
+        ids.add(f"{prefix}-{suffix}")
+    return list(ids)
+
+
+# =========================
+# GENERATION LOGIC
+# =========================
 
 def generate_name() -> Tuple[str, str]:
     return random.choice(FIRST_NAMES), random.choice(LAST_NAMES)
@@ -520,7 +528,7 @@ def generate_state_city() -> Tuple[str, str]:
     return state, city
 
 def generate_hire_date() -> date:
-    year = weighted_choice_from_dict(HIRE_YEAR_WEIGHTS)
+    year = int(weighted_choice_from_dict(HIRE_YEAR_WEIGHTS))
     return random_date_in_year(year)
 
 def generate_department() -> str:
@@ -532,7 +540,6 @@ def generate_job_title(department: str) -> str:
 def generate_education_level(job_title: str) -> str:
     options = EDUCATION_BY_JOB.get(job_title)
     if not options:
-        # fallback
         return "Bachelor"
     levels = [lvl for (lvl, w) in options]
     weights = [w for (lvl, w) in options]
@@ -546,52 +553,31 @@ def generate_overtime() -> str:
 
 def generate_salary(department: str, job_title: str) -> int:
     lo, hi = SALARY_RANGES[(department, job_title)]
-    # Use a triangular distribution to concentrate toward mid-high for senior roles
     mid = (lo + hi) / 2
     val = random.triangular(lo, hi, mid + (hi - mid) * 0.15)
-    # Round to nearest 100
     return int(round(val / 100.0) * 100)
 
 def pick_age_for_job(job_title: str) -> int:
     min_age = MIN_AGE_BY_JOB.get(job_title, 18)
-
-    # Pick an age group then sample uniformly within it, respecting min age
     for _ in range(50):
-        (a_lo, a_hi), w = random.choices(AGE_GROUPS, weights=[x[1] for x in AGE_GROUPS], k=1)[0]
+        (a_lo, a_hi), _w = random.choices(AGE_GROUPS, weights=[x[1] for x in AGE_GROUPS], k=1)[0]
         a_lo2 = max(a_lo, min_age)
         if a_lo2 <= a_hi:
             return random.randint(a_lo2, a_hi)
-
-    # fallback if something goes weird
     return max(min_age, 25)
 
 def generate_birth_date(hire_date: date, job_title: str) -> date:
-    """
-    Ensures:
-    - Age respects job-title minimums
-    - Person is at least (min_age) at hire date
-    """
     min_age = MIN_AGE_BY_JOB.get(job_title, 18)
-
-    # Choose an age at hire, then back-calculate birth year
-    age_at_hire = pick_age_for_job(job_title)
-    age_at_hire = max(age_at_hire, min_age)
-
-    # Pick a birthday within the year so that the computed age_at_hire is consistent
-    # We'll pick a birthdate in a range that yields the desired age_at_hire.
-    # Approx: birth_year = hire_year - age_at_hire (then adjust day/month logic)
+    age_at_hire = max(pick_age_for_job(job_title), min_age)
     target_birth_year = hire_date.year - age_at_hire
 
-    # Pick a birthdate candidate; validate actual age at hire is >= min_age and close to chosen
     for _ in range(200):
         bd = random_date_in_year(target_birth_year)
         actual_age = years_between(bd, hire_date)
         if actual_age >= min_age and (actual_age == age_at_hire or abs(actual_age - age_at_hire) <= 1):
             return bd
 
-    # fallback: force a safe date
     bd = date(target_birth_year, 6, 15)
-    # if somehow too young (edge cases), push back one year
     while years_between(bd, hire_date) < min_age:
         bd = date(bd.year - 1, bd.month, bd.day)
     return bd
@@ -600,25 +586,17 @@ def should_terminate() -> bool:
     return random.random() < TERMINATION_RATE
 
 def generate_termination_date(hire_date: date) -> Optional[date]:
-    """
-    If terminated:
-    - Pick a termination year with probabilities 2015–2024
-    - Termination date >= hire_date + 6 months
-    - Termination date <= 2024-12-31
-    If cannot find a valid date after multiple tries, return None (kept employed).
-    """
     min_term = add_months(hire_date, 6)
     max_term = date(2024, 12, 31)
     if min_term > max_term:
         return None
 
     for _ in range(200):
-        y = weighted_choice_from_dict(TERM_YEAR_WEIGHTS)
+        y = int(weighted_choice_from_dict(TERM_YEAR_WEIGHTS))
         td = random_date_in_year(y)
         if min_term <= td <= max_term:
             return td
 
-    # Fallback: pick any date in [min_term, max_term]
     span = (max_term - min_term).days
     return min_term + timedelta(days=random.randint(0, span))
 
@@ -629,21 +607,15 @@ def compute_adjusted_salary(
     birth_date: date,
     as_of: date,
 ) -> int:
-    """
-    Adjusted Salary = base_salary * gender_multiplier * (1 + education_increment) * (1 + age_increment)
-    - age_increment: +0.2% per year over 30, capped at +6%
-    """
     age = years_between(birth_date, as_of)
 
     gender_mult = GENDER_MULTIPLIER.get(gender, 1.0)
-    edu_inc = EDU_INCREMENT.get(education, 0.07)  # default bachelor-like
+    edu_inc = EDU_INCREMENT.get(education, 0.07)
 
     age_over = max(0, age - AGE_BASE)
     age_inc = clamp(age_over * AGE_STEP, 0.0, AGE_CAP)
 
     adjusted = base_salary * gender_mult * (1.0 + edu_inc) * (1.0 + age_inc)
-
-    # Round to nearest 100
     return int(round(adjusted / 100.0) * 100)
 
 
@@ -651,8 +623,7 @@ def compute_adjusted_salary(
 # MAIN GENERATOR
 # =========================
 
-def generate_record(emp_num: int) -> Dict[str, object]:
-    employee_id = generate_employee_id(emp_num)
+def generate_record(employee_id: str) -> Dict[str, object]:
     first_name, last_name = generate_name()
     gender = generate_gender()
     state, city = generate_state_city()
@@ -671,7 +642,6 @@ def generate_record(emp_num: int) -> Dict[str, object]:
 
     terminated = should_terminate()
     termination_date = generate_termination_date(hire_date) if terminated else None
-    # If we failed to generate a valid termination date, treat as not terminated
     if terminated and termination_date is None:
         terminated = False
 
@@ -705,8 +675,11 @@ def generate_record(emp_num: int) -> Dict[str, object]:
 
 def generate_dataset(n: int) -> List[Dict[str, object]]:
     records: List[Dict[str, object]] = []
-    for i in range(1, n + 1):
-        records.append(generate_record(i))
+    employee_ids = generate_employee_ids(n)  # FIX: random unique IDs like 00-########
+
+    for i in range(n):
+        records.append(generate_record(employee_ids[i]))
+
     return records
 
 def write_csv(path: str, records: List[Dict[str, object]]) -> None:
@@ -719,7 +692,6 @@ def write_csv(path: str, records: List[Dict[str, object]]) -> None:
         w.writerows(records)
 
 def sanity_report(records: List[Dict[str, object]]) -> None:
-    # Simple checks (prints to console)
     total = len(records)
     female = sum(1 for r in records if r["Gender"] == "Female")
     male = sum(1 for r in records if r["Gender"] == "Male")
@@ -731,7 +703,6 @@ def sanity_report(records: List[Dict[str, object]]) -> None:
     print(f"Male: {male} ({male/total:.3%})")
     print(f"Terminated: {terminated} ({terminated/total:.3%})")
 
-    # Check termination >= hire + 6 months
     bad_terms = 0
     for r in records:
         if r["Termination Date"]:
