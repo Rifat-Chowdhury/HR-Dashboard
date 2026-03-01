@@ -1,0 +1,1949 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.26.0206.0336                               -->
+<workbook original-version='18.1' source-build='2025.3.3 (20253.26.0206.0336)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <style-rule element='all'>
+      <format attr='font-family' value='Trebuchet MS' />
+      <format attr='color' value='#777777' />
+    </style-rule>
+  </style>
+  <datasources>
+    <datasource caption='HumanResources' inline='true' name='federated.0s58ass1qgssds1fw08dp0cxyfeo' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='HumanResources' name='textscan.1j1ewe50ltao1y159z46j1ydki63'>
+            <connection class='textscan' directory='C:/Users/rifat/OneDrive/Documents/GitHub/HR-Dashboard' filename='HumanResources.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1j1ewe50ltao1y159z46j1ydki63' name='HumanResources.csv' table='[HumanResources#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='af_ZA' separator=','>
+            <column datatype='string' name='Employee ID' ordinal='0' />
+            <column datatype='string' name='First Name' ordinal='1' />
+            <column datatype='string' name='Last Name' ordinal='2' />
+            <column datatype='string' name='Gender' ordinal='3' />
+            <column datatype='string' name='State' ordinal='4' />
+            <column datatype='string' name='City' ordinal='5' />
+            <column datatype='date' name='Hire Date' ordinal='6' />
+            <column datatype='string' name='Department' ordinal='7' />
+            <column datatype='string' name='Job Title' ordinal='8' />
+            <column datatype='string' name='Education Level' ordinal='9' />
+            <column datatype='string' name='Performance Rating' ordinal='10' />
+            <column datatype='string' name='Overtime' ordinal='11' />
+            <column datatype='integer' name='Salary' ordinal='12' />
+            <column datatype='date' name='Birth Date' ordinal='13' />
+            <column datatype='date' name='Termination Date' ordinal='14' />
+            <column datatype='integer' name='Adjusted Salary' ordinal='15' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;R&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;af_ZA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Employee ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Employee ID]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Employee ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>First Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[First Name]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>First Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Last Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Last Name]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Last Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hire Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Hire Date]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Hire Date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Department</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Department]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Department</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Job Title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Job Title]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Job Title</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Education Level</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Education Level]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Education Level</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Performance Rating</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Performance Rating]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Performance Rating</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Overtime</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Overtime]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Overtime</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Salary</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Salary]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Salary</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Birth Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Birth Date]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Birth Date</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Termination Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Termination Date]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Termination Date</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Adjusted Salary</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Adjusted Salary]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Adjusted Salary</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='HumanResources.csv' datatype='table' name='[__tableau_internal_object_id__].[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]' role='measure' type='quantitative' />
+      <drill-paths>
+        <drill-path name='State, City' />
+      </drill-paths>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_14er9zp0a5dnyn1c9ptyf1ogrk4w.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/01/2026 11:29:24 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Employee ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Employee ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Employee ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8950</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>First Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[First Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>First Name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>40</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Last Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Last Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Last Name</remote-alias>
+              <ordinal>2</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>40</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>3</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>4</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>5</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Hire Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Hire Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Hire Date</remote-alias>
+              <ordinal>6</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2753</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Department</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Department]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Department</remote-alias>
+              <ordinal>7</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Job Title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Job Title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Job Title</remote-alias>
+              <ordinal>8</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Education Level</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Education Level]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Education Level</remote-alias>
+              <ordinal>9</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Performance Rating</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Performance Rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Performance Rating</remote-alias>
+              <ordinal>10</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Overtime</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Overtime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Overtime</remote-alias>
+              <ordinal>11</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Salary</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Salary]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Salary</remote-alias>
+              <ordinal>12</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1572</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Birth Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Birth Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Birth Date</remote-alias>
+              <ordinal>13</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>4085</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Termination Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Termination Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Termination Date</remote-alias>
+              <ordinal>14</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>668</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Adjusted Salary</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Adjusted Salary]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Adjusted Salary</remote-alias>
+              <ordinal>15</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1789</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HumanResources.csv_3B00FD25028D45D3A755743E638845F5]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='HumanResources.csv' id='HumanResources.csv_3B00FD25028D45D3A755743E638845F5'>
+            <properties context=''>
+              <relation connection='textscan.1j1ewe50ltao1y159z46j1ydki63' name='HumanResources.csv' table='[HumanResources#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='af_ZA' separator=','>
+                  <column datatype='string' name='Employee ID' ordinal='0' />
+                  <column datatype='string' name='First Name' ordinal='1' />
+                  <column datatype='string' name='Last Name' ordinal='2' />
+                  <column datatype='string' name='Gender' ordinal='3' />
+                  <column datatype='string' name='State' ordinal='4' />
+                  <column datatype='string' name='City' ordinal='5' />
+                  <column datatype='date' name='Hire Date' ordinal='6' />
+                  <column datatype='string' name='Department' ordinal='7' />
+                  <column datatype='string' name='Job Title' ordinal='8' />
+                  <column datatype='string' name='Education Level' ordinal='9' />
+                  <column datatype='string' name='Performance Rating' ordinal='10' />
+                  <column datatype='string' name='Overtime' ordinal='11' />
+                  <column datatype='integer' name='Salary' ordinal='12' />
+                  <column datatype='date' name='Birth Date' ordinal='13' />
+                  <column datatype='date' name='Termination Date' ordinal='14' />
+                  <column datatype='integer' name='Adjusted Salary' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='dataset' inline='true' name='federated.0yhi46s0goi6hk11vhydu1eocudy' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='dataset' name='textscan.126qcbm0lhs9my1amxtyd1rbrqdu'>
+            <connection class='textscan' directory='C:/Users/rifat/Downloads/61d07bdc5cb846baafe42fc6bd78cb34/hr-dashboard-project' filename='dataset.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.126qcbm0lhs9my1amxtyd1rbrqdu' name='dataset.csv' table='[dataset#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=';'>
+            <column datatype='string' name='Employee_ID' ordinal='0' />
+            <column datatype='string' name='First Name' ordinal='1' />
+            <column datatype='string' name='Last Name' ordinal='2' />
+            <column datatype='string' name='Gender' ordinal='3' />
+            <column datatype='string' name='State' ordinal='4' />
+            <column datatype='string' name='City' ordinal='5' />
+            <column datatype='string' name='Education Level' ordinal='6' />
+            <column datatype='date' name='Birthdate' ordinal='7' />
+            <column datatype='date' name='Hiredate' ordinal='8' />
+            <column datatype='date' name='Termdate' ordinal='9' />
+            <column datatype='string' name='Department' ordinal='10' />
+            <column datatype='string' name='Job Title' ordinal='11' />
+            <column datatype='integer' name='Salary' ordinal='12' />
+            <column datatype='string' name='Performance Rating' ordinal='13' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Employee_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Employee_ID]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>Employee_ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>First Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[First Name]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>First Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Last Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Last Name]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>Last Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Education Level</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Education Level]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>Education Level</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Birthdate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Birthdate]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>Birthdate</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hiredate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Hiredate]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>Hiredate</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Termdate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Termdate]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>Termdate</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Department</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Department]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>Department</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Job Title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Job Title]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>Job Title</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Salary</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Salary]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>Salary</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Performance Rating</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Performance Rating]</local-name>
+            <parent-name>[dataset.csv]</parent-name>
+            <remote-alias>Performance Rating</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='dataset.csv' datatype='table' name='[__tableau_internal_object_id__].[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]' role='measure' type='quantitative' />
+      <drill-paths>
+        <drill-path name='State, City'>
+          <field>[State]</field>
+          <field>[City]</field>
+        </drill-path>
+      </drill-paths>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_1hdgnwd1u3ig3n1car4qu0gec1j8.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/01/2026 11:30:32 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Employee_ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Employee_ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Employee_ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8950</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>First Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[First Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>First Name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>644</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Last Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Last Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Last Name</remote-alias>
+              <ordinal>2</ordinal>
+              <family>dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1022</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>3</ordinal>
+              <family>dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>4</ordinal>
+              <family>dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>5</ordinal>
+              <family>dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Education Level</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Education Level]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Education Level</remote-alias>
+              <ordinal>6</ordinal>
+              <family>dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Birthdate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Birthdate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Birthdate</remote-alias>
+              <ordinal>7</ordinal>
+              <family>dataset.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>4334</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Hiredate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Hiredate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Hiredate</remote-alias>
+              <ordinal>8</ordinal>
+              <family>dataset.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2566</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Termdate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Termdate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Termdate</remote-alias>
+              <ordinal>9</ordinal>
+              <family>dataset.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>655</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Department</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Department]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Department</remote-alias>
+              <ordinal>10</ordinal>
+              <family>dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Job Title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Job Title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Job Title</remote-alias>
+              <ordinal>11</ordinal>
+              <family>dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>28</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Salary</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Salary]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Salary</remote-alias>
+              <ordinal>12</ordinal>
+              <family>dataset.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4845</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Performance Rating</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Performance Rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Performance Rating</remote-alias>
+              <ordinal>13</ordinal>
+              <family>dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[dataset.csv_96EB0D457ABF420DA513C0B8CA458226]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='dataset.csv' id='dataset.csv_96EB0D457ABF420DA513C0B8CA458226'>
+            <properties context=''>
+              <relation connection='textscan.126qcbm0lhs9my1amxtyd1rbrqdu' name='dataset.csv' table='[dataset#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=';'>
+                  <column datatype='string' name='Employee_ID' ordinal='0' />
+                  <column datatype='string' name='First Name' ordinal='1' />
+                  <column datatype='string' name='Last Name' ordinal='2' />
+                  <column datatype='string' name='Gender' ordinal='3' />
+                  <column datatype='string' name='State' ordinal='4' />
+                  <column datatype='string' name='City' ordinal='5' />
+                  <column datatype='string' name='Education Level' ordinal='6' />
+                  <column datatype='date' name='Birthdate' ordinal='7' />
+                  <column datatype='date' name='Hiredate' ordinal='8' />
+                  <column datatype='date' name='Termdate' ordinal='9' />
+                  <column datatype='string' name='Department' ordinal='10' />
+                  <column datatype='string' name='Job Title' ordinal='11' />
+                  <column datatype='integer' name='Salary' ordinal='12' />
+                  <column datatype='string' name='Performance Rating' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='HumanResources (2)' inline='true' name='federated.0dymbf119do9bg16acqra1fj4bbs' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='HumanResources' name='textscan.1m6f2b2111i63h1ejazfe10fz0x3'>
+            <connection class='textscan' directory='C:/Users/rifat/OneDrive/Documents/GitHub/HR-Dashboard' filename='HumanResources.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1m6f2b2111i63h1ejazfe10fz0x3' name='HumanResources.csv' table='[HumanResources#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='string' name='Employee ID' ordinal='0' />
+            <column datatype='string' name='First Name' ordinal='1' />
+            <column datatype='string' name='Last Name' ordinal='2' />
+            <column datatype='string' name='Gender' ordinal='3' />
+            <column datatype='string' name='State' ordinal='4' />
+            <column datatype='string' name='City' ordinal='5' />
+            <column datatype='date' name='Hire Date' ordinal='6' />
+            <column datatype='string' name='Department' ordinal='7' />
+            <column datatype='string' name='Job Title' ordinal='8' />
+            <column datatype='string' name='Education Level' ordinal='9' />
+            <column datatype='string' name='Performance Rating' ordinal='10' />
+            <column datatype='string' name='Overtime' ordinal='11' />
+            <column datatype='integer' name='Salary' ordinal='12' />
+            <column datatype='date' name='Birth Date' ordinal='13' />
+            <column datatype='date' name='Termination Date' ordinal='14' />
+            <column datatype='integer' name='Adjusted Salary' ordinal='15' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Employee ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Employee ID]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Employee ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>First Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[First Name]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>First Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Last Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Last Name]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Last Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hire Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Hire Date]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Hire Date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Department</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Department]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Department</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Job Title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Job Title]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Job Title</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Education Level</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Education Level]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Education Level</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Performance Rating</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Performance Rating]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Performance Rating</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Overtime</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Overtime]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Overtime</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Salary</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Salary]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Salary</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Birth Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Birth Date]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Birth Date</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Termination Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Termination Date]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Termination Date</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Adjusted Salary</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Adjusted Salary]</local-name>
+            <parent-name>[HumanResources.csv]</parent-name>
+            <remote-alias>Adjusted Salary</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Total Hired' datatype='integer' name='[Calculation_0923908710809600]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT ([Employee ID])' />
+      </column>
+      <column caption='Total Terminated' datatype='integer' name='[Calculation_0923908711084033]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT (IF NOT ISNULL ([Termination Date]) THEN [Employee ID] END)' />
+      </column>
+      <column caption='Total Active' datatype='integer' name='[Calculation_0923908715257858]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT (IF NOT ISNULL ([Termination Date]) THEN [Employee ID] END)' />
+      </column>
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='HumanResources.csv' datatype='table' name='[__tableau_internal_object_id__].[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]' role='measure' type='quantitative' />
+      <drill-paths>
+        <drill-path name='Department, Job Title'>
+          <field>[Department]</field>
+          <field>[Job Title]</field>
+        </drill-path>
+        <drill-path name='State, City' />
+      </drill-paths>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_09ccgad1lx8g3y1dye89r0lddnl8.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/01/2026 11:32:49 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Employee ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Employee ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Employee ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8950</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>First Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[First Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>First Name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>40</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Last Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Last Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Last Name</remote-alias>
+              <ordinal>2</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>40</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>3</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>4</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>5</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Hire Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Hire Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Hire Date</remote-alias>
+              <ordinal>6</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2753</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Department</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Department]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Department</remote-alias>
+              <ordinal>7</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Job Title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Job Title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Job Title</remote-alias>
+              <ordinal>8</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Education Level</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Education Level]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Education Level</remote-alias>
+              <ordinal>9</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Performance Rating</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Performance Rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Performance Rating</remote-alias>
+              <ordinal>10</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Overtime</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Overtime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Overtime</remote-alias>
+              <ordinal>11</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Salary</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Salary]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Salary</remote-alias>
+              <ordinal>12</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1572</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Birth Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Birth Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Birth Date</remote-alias>
+              <ordinal>13</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>4085</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Termination Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Termination Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Termination Date</remote-alias>
+              <ordinal>14</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>668</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Adjusted Salary</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Adjusted Salary]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Adjusted Salary</remote-alias>
+              <ordinal>15</ordinal>
+              <family>HumanResources.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1789</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='HumanResources.csv' id='HumanResources.csv_AAC1E9AE60E04FEC812A594231B03D7E'>
+            <properties context=''>
+              <relation connection='textscan.1m6f2b2111i63h1ejazfe10fz0x3' name='HumanResources.csv' table='[HumanResources#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                  <column datatype='string' name='Employee ID' ordinal='0' />
+                  <column datatype='string' name='First Name' ordinal='1' />
+                  <column datatype='string' name='Last Name' ordinal='2' />
+                  <column datatype='string' name='Gender' ordinal='3' />
+                  <column datatype='string' name='State' ordinal='4' />
+                  <column datatype='string' name='City' ordinal='5' />
+                  <column datatype='date' name='Hire Date' ordinal='6' />
+                  <column datatype='string' name='Department' ordinal='7' />
+                  <column datatype='string' name='Job Title' ordinal='8' />
+                  <column datatype='string' name='Education Level' ordinal='9' />
+                  <column datatype='string' name='Performance Rating' ordinal='10' />
+                  <column datatype='string' name='Overtime' ordinal='11' />
+                  <column datatype='integer' name='Salary' ordinal='12' />
+                  <column datatype='date' name='Birth Date' ordinal='13' />
+                  <column datatype='date' name='Termination Date' ordinal='14' />
+                  <column datatype='integer' name='Adjusted Salary' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='BAN Active'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='HumanResources (2)' name='federated.0dymbf119do9bg16acqra1fj4bbs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dymbf119do9bg16acqra1fj4bbs'>
+            <column caption='Total Active' datatype='integer' name='[Calculation_0923908715257858]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT (IF NOT ISNULL ([Termination Date]) THEN [Employee ID] END)' />
+            </column>
+            <column datatype='string' name='[Employee ID]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Termination Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_0923908715257858]' derivation='User' name='[usr:Calculation_0923908715257858:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#1b1b1b' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='18' />
+            <format attr='color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.0dymbf119do9bg16acqra1fj4bbs].[usr:Calculation_0923908715257858:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.0dymbf119do9bg16acqra1fj4bbs].[usr:Calculation_0923908715257858:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{26841FFD-793B-4909-80B8-2558F6987A19}' />
+    </worksheet>
+    <worksheet name='BAN Hired'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='HumanResources (2)' name='federated.0dymbf119do9bg16acqra1fj4bbs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dymbf119do9bg16acqra1fj4bbs'>
+            <column caption='Total Hired' datatype='integer' name='[Calculation_0923908710809600]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT ([Employee ID])' />
+            </column>
+            <column datatype='string' name='[Employee ID]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_0923908710809600]' derivation='User' name='[usr:Calculation_0923908710809600:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#1b1b1b' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='18' />
+            <format attr='color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.0dymbf119do9bg16acqra1fj4bbs].[usr:Calculation_0923908710809600:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.0dymbf119do9bg16acqra1fj4bbs].[usr:Calculation_0923908710809600:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A04BC76D-6FF5-43BC-830E-CEA2F77650F8}' />
+    </worksheet>
+    <worksheet name='BAN Terminated'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='HumanResources (2)' name='federated.0dymbf119do9bg16acqra1fj4bbs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dymbf119do9bg16acqra1fj4bbs'>
+            <column caption='Total Terminated' datatype='integer' name='[Calculation_0923908711084033]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT (IF NOT ISNULL ([Termination Date]) THEN [Employee ID] END)' />
+            </column>
+            <column datatype='string' name='[Employee ID]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Termination Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_0923908711084033]' derivation='User' name='[usr:Calculation_0923908711084033:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#1b1b1b' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='18' />
+            <format attr='color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.0dymbf119do9bg16acqra1fj4bbs].[usr:Calculation_0923908711084033:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2DDB8C31-4341-4C8E-B2AC-AF2D6E3C7099}' />
+    </worksheet>
+    <worksheet name='TEST'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='HumanResources (2)' name='federated.0dymbf119do9bg16acqra1fj4bbs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dymbf119do9bg16acqra1fj4bbs'>
+            <column caption='Total Terminated' datatype='integer' name='[Calculation_0923908711084033]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT (IF NOT ISNULL ([Termination Date]) THEN [Employee ID] END)' />
+            </column>
+            <column datatype='string' name='[Employee ID]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Termination Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Employee ID]' derivation='None' name='[none:Employee ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_0923908711084033]' derivation='User' name='[usr:Calculation_0923908711084033:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Termination Date]' derivation='Year' name='[yr:Termination Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>(([federated.0dymbf119do9bg16acqra1fj4bbs].[none:Employee ID:nk] / [federated.0dymbf119do9bg16acqra1fj4bbs].[yr:Termination Date:ok]) * [federated.0dymbf119do9bg16acqra1fj4bbs].[usr:Calculation_0923908711084033:qk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{AD00AEB7-5436-4855-83C6-246D9F963538}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='72'>
+    <window class='worksheet' name='BAN Hired'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{222B117F-FE5C-4B3F-AC7E-FCFDDD338F23}' />
+    </window>
+    <window class='worksheet' name='BAN Active'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{3EAC385C-9607-4343-9C49-0862161332C4}' />
+    </window>
+    <window class='worksheet' name='BAN Terminated'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{34BC9E11-3B48-4983-9237-64115996EA01}' />
+    </window>
+    <window class='worksheet' maximized='true' name='TEST'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E882F704-1E3E-44FA-A25E-044A89C361A2}' />
+    </window>
+  </windows>
+</workbook>
